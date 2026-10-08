@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shorts-safe-zone"
+version = "0.1.0"
+description = "Check that on-screen text in a vertical short-form video stays out of platform UI zones"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "ShortKiln" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["shorts", "reels", "tiktok", "safe-zone", "ocr", "video", "ffmpeg"]
+classifiers = [
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/eiaimulyo-pixel/shorts-safe-zone"
+
+[project.scripts]
+shorts-safe-zone = "shorts_safe_zone.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+shorts_safe_zone = ["ocr_vision.swift"]
